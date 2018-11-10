@@ -1,0 +1,34 @@
+Multi processing
+evens with user--- waiting for one thing to be done. 
+
+
+queue a producer and consumer
+
+purpose of queue is to make the even alittle cleaner.
+
+instead of coordiationing data feching create order that is is in the file or out 
+
+
+Whats different between processingin and threads.
+
+one instance o of program
+-mem is allocated
+-mem is not used by other processes 
+-multi core multi processors
+
+CORE i7 -- 7 core
+
+OS will move processes 
+
+careful of using threading q vs multiprocessing q
+
+the mp q must pickle file in order to move the data around
+for the consumer
+
+THERE IS NO RETURN FOR THREAD OR PROCESSESS
+
+PARENT PROCESS IS MAIN
+
+map automatically unpikles async does not! 
+
+r.get() to unpickle 
