@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2712f423-3b57-4181-a550-5a9d7974b070" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/linearLab4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multiThreadedLab4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
-    </list>
+    <list default="true" id="2712f423-3b57-4181-a550-5a9d7974b070" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +29,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="multiThreadedLab4.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="multiThreadedLab4.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/multiThreadedLab4.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="332">
               <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="multiProcessedLab4.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/multiProcessedLab4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-833">
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -71,6 +75,7 @@
         <option value="$PROJECT_DIR$/4_processes.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/multiThreadedLab4.py" />
+        <option value="$PROJECT_DIR$/multiProcessedLab4.py" />
       </list>
     </option>
   </component>
@@ -83,7 +88,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
@@ -223,7 +228,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -347,6 +352,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
           <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multiProcessedLab4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-833">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
         </state>
       </provider>
     </entry>
