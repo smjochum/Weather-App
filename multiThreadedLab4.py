@@ -26,7 +26,8 @@ class Weather:
         """Given list of zip codes, returns url with mapped route to city"""
         updateUrl = []
         for zipCode in zip_codes:
-            url = r"http://api.openweathermap.org/data/2.5/weather?zip={},us".format(zipCode)
+            # Added units = imperial
+            url = r"http://api.openweathermap.org/data/2.5/weather?zip={},us&units=imperial".format(zipCode)
             url += API_KEY #concats string
             updateUrl.append(url)
 
@@ -71,6 +72,12 @@ class Weather:
 
     def formatWeatherInfo(self, cityData:dict):
         """Given dictionary, extracts a city list and assigns a zipcode as a key to a dictionary of city description and temp """
+
+        '''  
+            Added: function to change from KelvinToFahrenheit
+
+        '''
+
         ##TEMP IS NOT CORRECT NUMBER
 
         cityList = []
@@ -84,11 +91,17 @@ class Weather:
             cityList.append(cityName)
             D = {}
             L = city.get("main")
+            
+            # Add changing from Kelvin to Fahrenheit
             D['temp'] = L.get('temp')
+
+            
             L = city.get("weather")
             weatherDict = L[0]
             D['description'] = weatherDict.get('description')
-            cityDict[self.zipCodes[index]] = D
+
+            cityDict[cityName] = D
+
             index += 1
 
         return cityList, cityDict
