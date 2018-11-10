@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2712f423-3b57-4181-a550-5a9d7974b070" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/linearLab4.py" beforeDir="false" afterPath="$PROJECT_DIR$/linearLab4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multiProcessedLab4.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiProcessedLab4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multiThreadedLab4.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiThreadedLab4.py" afterDir="false" />
-    </list>
+    <list default="true" id="2712f423-3b57-4181-a550-5a9d7974b070" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +75,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-15" />
     <option name="width" value="1950" />
     <option name="height" value="2075" />
