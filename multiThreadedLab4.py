@@ -1,10 +1,6 @@
 import requests
 import threading
 
-import time
-import multiprocessing as mp
-
-
 ZIP_CODES = [94086, 92093, 90013, 95192, 94132, 94720, 95064, 95819, 92697, 93940, 94544]
 
 SAMPLE_URL = r"https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=b6907d289e10d714a6e88b30761fae22" #MTV
@@ -21,7 +17,6 @@ class Weather:
         self.cityList, self.weatherInfoDict = self.formatWeatherInfo(weatherListOfDicts)
         print(self.cityList, self.weatherInfoDict) # THESE ARE THE THINGS YOU NEED        :-)  ***HUE***
 
-
     def updateZipCodes(self,zip_codes): #use path sys package?
         """Given list of zip codes, returns url with mapped route to city"""
         updateUrl = []
@@ -37,17 +32,8 @@ class Weather:
         """Given url requests and returns api"""
         # import pdb; pdb.set_trace()
         page = requests.get(url)
-        result_data.append( page.json()) #page.json()
+        result_data.append(page.json()) #page.json()
 
-    def threadOne(self, func, arg, ):
-        """Given function, starts process"""
-        # start = time.time()
-        t = threading.Thread(target=func, args=(arg,))
-        t.start()
-        # t.join()
-        # end = time.time()
-        # diff = end - start
-        return t
 
     def getWeatherInfo(self, urlList):
             """ Given urls with appropriate routes, """

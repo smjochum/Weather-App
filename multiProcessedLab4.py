@@ -33,47 +33,21 @@ class Weather:
 
         return updateUrl
 
-    def getWeather(self, url:str, result_data):
+    def getWeather(self, url:str):
         """Given url requests and returns api"""
-        # import pdb; pdb.set_trace()
         page = requests.get(url)
-        result_data.append( page.json()) #page.json()
-
-    def threadOne(self, func, arg, ):
-        """Given function, starts process"""
-        # start = time.time()
-        t = threading.Thread(target=func, args=(arg,))
-        t.start()
-        # t.join()
-        # end = time.time()
-        # diff = end - start
-        return t
+        return page.json()
 
     def getWeatherInfo(self, urlList):
-            """ Given urls with appropriate routes, """
-            listOfThreads = []
-            resultData = []
-            for url in urlList:
-                t = threading.Thread(target=self.getWeather, args=(url, resultData))
-                t.start()
-                listOfThreads.append(t)
-
-            self.joinThreads(listOfThreads)
+            """ Given urls with appropriate routes."""
+            pool = mp.Pool(processes= len(urlList))
+            resultData = pool.map(self.getWeather, (urlList))
             return resultData
-
-    def joinThreads(self, allThreads:list):
-        """Give list of threads, joins the them together to end processes"""
-        for thread in allThreads:
-            # if thread.alive() == True:
-            thread.join()
-        return None
-
 
 
     def formatWeatherInfo(self, cityData:dict):
         """Given dictionary, extracts a city list and assigns a zipcode as a key to a dictionary of city description and temp """
         ##TEMP IS NOT CORRECT NUMBER
-
         cityList = []
         index = 0
         cityDict = {}
