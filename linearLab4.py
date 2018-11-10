@@ -37,22 +37,6 @@ class Weather:
         page = requests.get(url)
         return page.json()
 
-    def threadOne(self, func,arg):
-        """Given function, starts process"""
-        # start = time.time()
-        t = threading.Thread(target=func, args=(arg,))
-        t.start()
-        # t.join()
-        # end = time.time()
-        # diff = end - start
-        return None
-
-    def joinThreads(self, allThreads:list):
-        """Give list of threads, joins the them together to end processes"""
-        for thread in allThreads:
-            # if thread.alive() == True:
-            thread.join()
-        return None
 
     def getWeatherInfo(self, urlList):
         """ """
