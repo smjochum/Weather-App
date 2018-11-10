@@ -1,0 +1,29 @@
+Part 2: Web access
+
+The current weather data is fetched from an  API of  OpenWeatherMap.org:  https://openweathermap.org/current
+Scroll down to the heading "By ZIP code" and you will see the orange color API call, which makes up the example URL:
+                http: api.openweathermap.org/data/2.5/weather?zip=94040,us
+
+In the example above, the zip is 94040 (Mountain View). With the URL you also need to append 2 more strings:
+1.  the string:    &units=imperial          so the temperature will be in Fahrenheit instead of the default Kelvin temperature
+2.  your key, which is a multi-digit hexadecimal string, such as:      &APPID=23d3a44948b47338224e4904
+
+
+The  complete URL in your code would look something like this:
+http: api.openweathermap.org/data/2.5/weather?zip=94040,us&units=imperial&APPID=23d3a44948b47338224e4904
+
+To obtain a key, click on the "sign up" link of the OpenWeatherMap link above. You need a log in id, an email address, and a password. You only sign up for the free account, which limits you to 60 data fetches per minute maximum (which should be more than enough to complete this lab).
+
+For the cities used in this lab, the list of zip codes is:
+[92093, 90013, 95192, 94132, 94720, 95064, 95819, 92697, 93940, 94544]
+which you can store as a class variable or a global variable..
+
+As the OpenWeatherMap website states, the data you download from the API is JSON format.
+Each data record is fairly large, with nested structures, so it is useful to download it to a JSON file with indentation so it's easier to see the relationship between the data values (dictionary of dictionaries or dictionary of list of dictionary)
+
+Out of each data record you need 3 data values:  the city 'name', the 'temp', and the weather condition 'description'
+All quoted strings are fields that you should look for.
+The city names that are displayed in the dialog window are extracted from the API downloaded data. Don't hard code the city names yourself
+
+
+
