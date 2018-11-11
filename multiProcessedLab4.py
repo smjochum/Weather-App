@@ -27,7 +27,7 @@ class Weather:
         updateUrl = []
         
         for zipCode in zip_codes:
-            url = r"http://api.openweathermap.org/data/2.5/weather?zip={},us".format(zipCode)
+            url = r"http://api.openweathermap.org/data/2.5/weather?zip={},us&units=imperial".format(zipCode)
             url += API_KEY #concats string
             updateUrl.append(url)
 
@@ -49,10 +49,7 @@ class Weather:
         """Given dictionary, extracts a city list and assigns a zipcode as a key to a dictionary of city description and temp """
         ##TEMP IS NOT CORRECT NUMBER
         cityList = []
-        index = 0
         cityDict = {}
-
-        type(cityData)
 
         for city in cityData:
             cityName = city.get("name")
@@ -63,8 +60,8 @@ class Weather:
             L = city.get("weather")
             weatherDict = L[0]
             D['description'] = weatherDict.get('description')
-            cityDict[self.zipCodes[index]] = D
-            index += 1
+            cityDict[cityName] = D
+
 
         return cityList, cityDict
 

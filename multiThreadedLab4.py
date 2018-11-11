@@ -67,10 +67,7 @@ class Weather:
         ##TEMP IS NOT CORRECT NUMBER
 
         cityList = []
-        index = 0
         cityDict = {}
-
-        type(cityData)
 
         for city in cityData:
             cityName = city.get("name")
@@ -80,17 +77,13 @@ class Weather:
             
             # Add changing from Kelvin to Fahrenheit
             D['temp'] = L.get('temp')
-
-            
             L = city.get("weather")
             weatherDict = L[0]
             D['description'] = weatherDict.get('description')
 
             cityDict[cityName] = D
 
-            index += 1
-
-        return cityList, cityDict
+          return cityList, cityDict
 
 
 
