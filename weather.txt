@@ -1,0 +1,6 @@
+Hayward: 62 degrees, smoke
+Los Angeles: 71 degrees, haze
+San Francisco: 60 degrees, smoke
+San Diego: 71 degrees, clear sky
+Santa Cruz: 60 degrees, haze
+San José: 61 degrees, haze

@@ -1,3 +1,5 @@
+from typing import Dict, Any
+
 import requests
 import threading
 
@@ -15,7 +17,7 @@ class Weather:
         urlList = self.updateZipCodes(zipCodes)
         weatherListOfDicts = self.getWeatherInfo(urlList)
         self.cityList, self.weatherInfoDict = self.formatWeatherInfo(weatherListOfDicts)
-        print(self.cityList, self.weatherInfoDict) # THESE ARE THE THINGS YOU NEED        :-)  ***HUE***
+        # print(self.cityList, self.weatherInfoDict) # THESE ARE THE THINGS YOU NEED        :-)  ***HUE***
 
     def updateZipCodes(self,zip_codes): #use path sys package?
         """Given list of zip codes, returns url with mapped route to city"""
@@ -72,7 +74,7 @@ class Weather:
         for city in cityData:
             cityName = city.get("name")
             cityList.append(cityName)
-            D = {}
+            D: Dict[str, Any] = {}
             L = city.get("main")
             
             # Add changing from Kelvin to Fahrenheit
