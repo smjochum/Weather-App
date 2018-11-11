@@ -15,7 +15,7 @@ class Weather:
         urlList = self.updateZipCodes(zipCodes)
         weatherListOfDicts = self.getWeatherInfo(urlList)
         self.cityList, self.weatherInfoDict = self.formatWeatherInfo(weatherListOfDicts)
-        print(self.cityList, self.weatherInfoDict) # THESE ARE THE THINGS YOU NEED        :-)  ***HUE***
+        # print(self.cityList, self.weatherInfoDict) # THESE ARE THE THINGS YOU NEED        :-)  ***HUE***
 
     def updateZipCodes(self,zip_codes): #use path sys package?
         """Given list of zip codes, returns url with mapped route to city"""
@@ -70,7 +70,7 @@ class Weather:
         index = 0
         cityDict = {}
 
-        type(cityData)
+        # type(cityData)
 
         for city in cityData:
             cityName = city.get("name")

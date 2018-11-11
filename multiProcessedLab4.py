@@ -27,7 +27,7 @@ class Weather:
         updateUrl = []
         
         for zipCode in zip_codes:
-            url = r"http://api.openweathermap.org/data/2.5/weather?zip={},us".format(zipCode)
+            url = r"http://api.openweathermap.org/data/2.5/weather?zip={},us&units=imperial".format(zipCode)
             url += API_KEY #concats string
             updateUrl.append(url)
 
