@@ -2,6 +2,9 @@ from typing import Dict, Any
 
 import requests
 import threading
+import json
+import time
+import copy
 
 ZIP_CODES = [94086, 92093, 90013, 95192, 94132, 94720, 95064, 95819, 92697, 93940, 94544]
 
@@ -11,13 +14,14 @@ API_KEY = "&APPID=3a4d4260edbb76d3c27c71f306b44c9c"
 
 class Weather:
     #__slots__ = ['zipCodes', 'cityList', 'weatherInfoDict']
-    def __init__(self, zipCodes:list):
+    def __init__(self, debug=False, zipCodes:list = ZIP_CODES):
         """Given a list of zipCodes parces weather API into a list of cities and nested dict of attributed keyed by Zipcode"""
+        self.debug = True
         self.zipCodes = zipCodes
         urlList = self.updateZipCodes(zipCodes)
         weatherListOfDicts = self.getWeatherInfo(urlList)
         self.cityList, self.weatherInfoDict = self.formatWeatherInfo(weatherListOfDicts)
-        # print(self.cityList, self.weatherInfoDict) # THESE ARE THE THINGS YOU NEED        :-)  ***HUE***
+        print(self.cityList, self.weatherInfoDict) # THESE ARE THE THINGS YOU NEED        :-)  ***HUE***
 
     def updateZipCodes(self,zip_codes): #use path sys package?
         """Given list of zip codes, returns url with mapped route to city"""
@@ -39,6 +43,17 @@ class Weather:
 
     def getWeatherInfo(self, urlList):
             """ Given urls with appropriate routes, """
+            createNewFile = False
+            if self.debug:
+                with open("json_output.json", "r") as read_file:
+                    store = json.load(read_file)
+                timeInserted = store[0]["timeInserted"]
+                if time.time() - timeInserted < 1000:
+                    store.pop(0)
+                    return store
+                else:
+                    createNewFile = True
+                
             listOfThreads = []
             resultData = []
             for url in urlList:
@@ -47,6 +62,14 @@ class Weather:
                 listOfThreads.append(t)
 
             self.joinThreads(listOfThreads)
+
+            if createNewFile:
+                # From json to json file
+                temp = copy.copy(resultData)
+                temp.insert(0, {"timeInserted": time.time()})
+                with open("json_output.json", "w") as output:
+                    json.dump(temp, output, separators=(",", ": "), indent=4)
+
             return resultData
 
     def joinThreads(self, allThreads:list):
@@ -56,17 +79,8 @@ class Weather:
             thread.join()
         return None
 
-
-
     def formatWeatherInfo(self, cityData:dict):
         """Given dictionary, extracts a city list and assigns a zipcode as a key to a dictionary of city description and temp """
-
-        '''  
-            Added: function to change from KelvinToFahrenheit
-
-        '''
-
-        ##TEMP IS NOT CORRECT NUMBER
 
         cityList = []
         cityDict = {}
@@ -91,6 +105,6 @@ class Weather:
 
 
 if __name__ =='__main__':
-    w = Weather(ZIP_CODES)
+    w = Weather(debug=True)
 
 

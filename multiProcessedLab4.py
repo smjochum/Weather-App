@@ -65,9 +65,6 @@ class Weather:
 
         return cityList, cityDict
 
-
-
-
 if __name__ =='__main__':
     w = Weather(ZIP_CODES)
 
