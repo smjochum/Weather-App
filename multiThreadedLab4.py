@@ -5,6 +5,7 @@ import threading
 import json
 import time
 import copy
+import os
 
 ZIP_CODES = [94086, 92093, 90013, 95192, 94132, 94720, 95064, 95819, 92697, 93940, 94544]
 
@@ -45,12 +46,15 @@ class Weather:
             """ Given urls with appropriate routes, """
             createNewFile = False
             if self.debug:
-                with open("json_output.json", "r") as read_file:
-                    store = json.load(read_file)
-                timeInserted = store[0]["timeInserted"]
-                if time.time() - timeInserted < 1000:
-                    store.pop(0)
-                    return store
+                if os.path.isfile("json_output.json"):
+                    with open("json_output.json", "r") as read_file:
+                        store = json.load(read_file)
+                    timeInserted = store[0]["timeInserted"]
+                    if time.time() - timeInserted < 1000:
+                        store.pop(0)
+                        return store
+                    else:
+                        createNewFile = True
                 else:
                     createNewFile = True
                 
@@ -99,7 +103,7 @@ class Weather:
 
             cityDict[cityName] = D
 
-          return cityList, cityDict
+        return cityList, cityDict
 
 
 
