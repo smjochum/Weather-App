@@ -1,5 +1,6 @@
 import requests
 import threading
+from timer import timeit
 
 import time
 import multiprocessing as mp
@@ -10,7 +11,8 @@ ZIP_CODES = [94086, 92093, 90013, 95192, 94132, 94720, 95064, 95819, 92697, 9394
 SAMPLE_URL = r"https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=b6907d289e10d714a6e88b30761fae22" #MTV
 
 API_KEY = "&APPID=3a4d4260edbb76d3c27c71f306b44c9c"
-
+a
+@timeit
 class Weather:
     #__slots__ = ['zipCodes', 'cityList', 'weatherInfoDict']
     def __init__(self, zipCodes:list):
@@ -47,7 +49,6 @@ class Weather:
 
     def formatWeatherInfo(self, cityData:dict):
         """Given dictionary, extracts a city list and assigns a zipcode as a key to a dictionary of city description and temp """
-        ##TEMP IS NOT CORRECT NUMBER
         cityList = []
         cityDict = {}
 
@@ -61,11 +62,7 @@ class Weather:
             weatherDict = L[0]
             D['description'] = weatherDict.get('description')
             cityDict[cityName] = D
-
-
-        return cityList, cityDict
-
-
+         return cityList, cityDict
 
 
 if __name__ =='__main__':

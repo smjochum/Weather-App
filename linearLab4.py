@@ -1,10 +1,7 @@
 import requests
 import threading
-
 import time
-import multiprocessing as mp
-
-
+from timer import timeit
 
 ZIP_CODES = [94086, 92093, 90013, 95192, 94132, 94720, 95064, 95819, 92697, 93940, 94544]
 
@@ -12,6 +9,7 @@ SAMPLE_URL = r"https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appi
 
 API_KEY = "&APPID=3a4d4260edbb76d3c27c71f306b44c9c"
 
+@timeit
 class Weather:
     __slots__ = ['zipCodes', 'cityList', 'weatherInfoDict']
     def __init__(self, zipCodes:list):
@@ -31,6 +29,7 @@ class Weather:
             updateUrl.append(url)
 
         return updateUrl
+
 
     def getWeather(self, url:str):
         """Given url requests and returns api"""
@@ -72,14 +71,3 @@ class Weather:
 if __name__ =='__main__':
     w = Weather(ZIP_CODES)
 
-
-#download indented Json
-#get city
-#key can be zip code
-#write timing decorator
-
-# FUNCT that returns tuple of cityList, dict zip(k), val = 'name', 'temp', 'description'
-
-#{ '94086': 'temp':59, 'description':"SMOKEY AF"}}
-
-#more than one city in zip
