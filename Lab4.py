@@ -36,7 +36,7 @@ class Window:
         win.title("Choose a city")
         win.geometry("250x500")
 
-        weather = helper.Weather(helper.ZIP_CODES)
+        weather = helper.Weather(debug=True)
         cityList = weather.cityList
 
         # Fix this later
@@ -52,18 +52,19 @@ class Window:
         insert_button.pack()
     
     def addNewCity(self, city):
-        weather = helper.Weather(helper.ZIP_CODES)
+        weather = helper.Weather(debug=True)
         sentence = "%s: %d degrees, %s" % (city, weather.weatherInfoDict[city]['temp'], weather.weatherInfoDict[city]['description'])
         self.listbox.insert("end", sentence)
     
     def on_closing(self):
         if (self.listbox.size() > 0) and messagebox.askokcancel("Save", "Do you want to save your file?"):
             dir = filedialog.askdirectory(initialdir=os.getcwd())
-            filename = dir + "/weather.txt"
-            messagebox.showinfo("save", "File weather.txt will be save in %s" % dir)
-            with open(filename, 'w') as fout:
-                fout.write('\n'.join(self.listbox.get(0, "end")))
-                fout.close()            
+            if dir != "":
+                filename = dir + "/weather.txt"
+                messagebox.showinfo("save", "File weather.txt will be save in %s" % dir)
+                with open(filename, 'w') as fout:
+                    fout.write('\n'.join(self.listbox.get(0, "end")))
+                    fout.close()            
 
         self.root.destroy()
 

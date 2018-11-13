@@ -62,6 +62,7 @@ class Weather:
             weatherDict = L[0]
             D['description'] = weatherDict.get('description')
             cityDict[cityName] = D
+
          return cityList, cityDict
 
 
