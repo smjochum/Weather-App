@@ -1,101 +1,59 @@
 [
     {
-        "timeInserted": 1541992667.043257
+        "timeInserted": 1542159891.8082983
     },
     {
         "coord": {
-            "lon": -117.84,
-            "lat": 33.61
+            "lon": -121.89,
+            "lat": 37.34
         },
         "weather": [
-            {
-                "id": 800,
-                "main": "Clear",
-                "description": "clear sky",
-                "icon": "01n"
-            }
-        ],
-        "base": "stations",
-        "main": {
-            "temp": 63.37,
-            "pressure": 1019,
-            "humidity": 5,
-            "temp_min": 51.98,
-            "temp_max": 71.06
-        },
-        "visibility": 16093,
-        "wind": {
-            "speed": 9.17,
-            "deg": 50
-        },
-        "clouds": {
-            "all": 1
-        },
-        "dt": 1541991480,
-        "sys": {
-            "type": 1,
-            "id": 485,
-            "message": 0.0042,
-            "country": "US",
-            "sunrise": 1542032431,
-            "sunset": 1542070210
-        },
-        "id": 420004505,
-        "name": "Irvine",
-        "cod": 200
-    },
-    {
-        "coord": {
-            "lon": -121.45,
-            "lat": 38.58
-        },
-        "weather": [
-            {
-                "id": 711,
-                "main": "Smoke",
-                "description": "smoke",
-                "icon": "50n"
-            },
             {
                 "id": 721,
                 "main": "Haze",
                 "description": "haze",
                 "icon": "50n"
+            },
+            {
+                "id": 711,
+                "main": "Smoke",
+                "description": "smoke",
+                "icon": "50n"
             }
         ],
         "base": "stations",
         "main": {
-            "temp": 48.81,
-            "pressure": 1022,
+            "temp": 58.89,
+            "pressure": 1028,
             "humidity": 34,
-            "temp_min": 44.6,
-            "temp_max": 53.96
+            "temp_min": 57.02,
+            "temp_max": 60.8
         },
-        "visibility": 3219,
+        "visibility": 4828,
         "wind": {
             "speed": 3.36,
-            "deg": 130
+            "deg": 340
         },
         "clouds": {
             "all": 90
         },
-        "dt": 1541991600,
+        "dt": 1542156960,
         "sys": {
             "type": 1,
-            "id": 422,
-            "message": 0.0047,
+            "id": 479,
+            "message": 0.0064,
             "country": "US",
-            "sunrise": 1542033884,
-            "sunset": 1542070486
+            "sunrise": 1542206758,
+            "sunset": 1542243460
         },
-        "id": 420004037,
-        "name": "Sacramento",
+        "id": 420006441,
+        "name": "San Jos\u00e9",
         "cod": 200
     },
     {
         "coord": {
-            "lon": -121.83,
-            "lat": 36.59
+            "lon": -122.46,
+            "lat": 37.71
         },
         "weather": [
             {
@@ -113,31 +71,31 @@
         ],
         "base": "stations",
         "main": {
-            "temp": 53.89,
-            "pressure": 1020,
-            "humidity": 35,
-            "temp_min": 51.08,
-            "temp_max": 57.02
+            "temp": 58.23,
+            "pressure": 1028,
+            "humidity": 61,
+            "temp_min": 55.4,
+            "temp_max": 60.98
         },
-        "visibility": 9656,
+        "visibility": 6437,
         "wind": {
-            "speed": 4.7,
-            "deg": 100
+            "speed": 3.27,
+            "deg": 42.0007
         },
         "clouds": {
-            "all": 1
+            "all": 75
         },
-        "dt": 1541991300,
+        "dt": 1542157260,
         "sys": {
             "type": 1,
-            "id": 431,
-            "message": 0.004,
+            "id": 478,
+            "message": 0.0044,
             "country": "US",
-            "sunrise": 1542033731,
-            "sunset": 1542070823
+            "sunrise": 1542206942,
+            "sunset": 1542243549
         },
-        "id": 420004272,
-        "name": "Monterey",
+        "id": 420004432,
+        "name": "San Francisco",
         "cod": 200
     },
     {
@@ -161,28 +119,28 @@
         ],
         "base": "stations",
         "main": {
-            "temp": 53.37,
-            "pressure": 1021,
-            "humidity": 20,
-            "temp_min": 44.78,
-            "temp_max": 60.08
+            "temp": 58.1,
+            "pressure": 1028,
+            "humidity": 57,
+            "temp_min": 55.4,
+            "temp_max": 60.98
         },
-        "visibility": 8047,
+        "visibility": 4828,
         "wind": {
-            "speed": 4.7,
-            "deg": 100
+            "speed": 3.27,
+            "deg": 42.0007
         },
         "clouds": {
-            "all": 40
+            "all": 90
         },
-        "dt": 1541991480,
+        "dt": 1542157260,
         "sys": {
             "type": 1,
             "id": 439,
-            "message": 0.0088,
+            "message": 0.0052,
             "country": "US",
-            "sunrise": 1542033992,
-            "sunset": 1542070772
+            "sunrise": 1542206917,
+            "sunset": 1542243483
         },
         "id": 420002222,
         "name": "Berkeley",
@@ -209,28 +167,28 @@
         ],
         "base": "stations",
         "main": {
-            "temp": 55.44,
-            "pressure": 1021,
-            "humidity": 25,
-            "temp_min": 48.02,
-            "temp_max": 60.08
+            "temp": 58.35,
+            "pressure": 1028,
+            "humidity": 51,
+            "temp_min": 55.4,
+            "temp_max": 60.98
         },
-        "visibility": 6437,
+        "visibility": 4828,
         "wind": {
-            "speed": 6.93,
-            "deg": 50
+            "speed": 2.82,
+            "deg": 357.001
         },
         "clouds": {
             "all": 1
         },
-        "dt": 1541991360,
+        "dt": 1542157260,
         "sys": {
             "type": 1,
             "id": 397,
-            "message": 0.007,
+            "message": 0.0057,
             "country": "US",
-            "sunrise": 1542033917,
-            "sunset": 1542070751
+            "sunrise": 1542206841,
+            "sunset": 1542243464
         },
         "id": 420002058,
         "name": "Hayward",
@@ -243,36 +201,36 @@
         },
         "weather": [
             {
-                "id": 800,
-                "main": "Clear",
-                "description": "clear sky",
-                "icon": "01n"
+                "id": 803,
+                "main": "Clouds",
+                "description": "broken clouds",
+                "icon": "04n"
             }
         ],
         "base": "stations",
         "main": {
-            "temp": 61.48,
-            "pressure": 1019,
-            "humidity": 11,
-            "temp_min": 51.98,
-            "temp_max": 68
+            "temp": 68.02,
+            "pressure": 1024,
+            "humidity": 5,
+            "temp_min": 62.96,
+            "temp_max": 71.96
         },
         "visibility": 16093,
         "wind": {
-            "speed": 6.93,
-            "deg": 100
+            "speed": 5.82,
+            "deg": 60
         },
         "clouds": {
-            "all": 1
+            "all": 75
         },
-        "dt": 1541991360,
+        "dt": 1542156960,
         "sys": {
             "type": 1,
             "id": 425,
-            "message": 0.0054,
+            "message": 0.0039,
             "country": "US",
-            "sunrise": 1542032198,
-            "sunset": 1542070141
+            "sunrise": 1542205103,
+            "sunset": 1542242871
         },
         "id": 420004281,
         "name": "San Diego",
@@ -280,50 +238,8 @@
     },
     {
         "coord": {
-            "lon": -118.24,
-            "lat": 34.05
-        },
-        "weather": [
-            {
-                "id": 711,
-                "main": "Smoke",
-                "description": "smoke",
-                "icon": "50n"
-            }
-        ],
-        "base": "stations",
-        "main": {
-            "temp": 64.62,
-            "pressure": 1019,
-            "humidity": 67,
-            "temp_min": 57.2,
-            "temp_max": 71.06
-        },
-        "visibility": 16093,
-        "wind": {
-            "speed": 3.78,
-            "deg": 29.502
-        },
-        "clouds": {
-            "all": 1
-        },
-        "dt": 1541991480,
-        "sys": {
-            "type": 1,
-            "id": 416,
-            "message": 0.005,
-            "country": "US",
-            "sunrise": 1542032576,
-            "sunset": 1542070257
-        },
-        "id": 420003778,
-        "name": "Los Angeles",
-        "cod": 200
-    },
-    {
-        "coord": {
-            "lon": -121.89,
-            "lat": 37.34
+            "lon": -121.83,
+            "lat": 36.59
         },
         "weather": [
             {
@@ -341,79 +257,31 @@
         ],
         "base": "stations",
         "main": {
-            "temp": 56.23,
-            "pressure": 1021,
-            "humidity": 24,
-            "temp_min": 51.08,
-            "temp_max": 60.08
+            "temp": 60.42,
+            "pressure": 1028,
+            "humidity": 74,
+            "temp_min": 57.92,
+            "temp_max": 62.96
         },
-        "visibility": 14484,
+        "visibility": 12874,
         "wind": {
-            "speed": 2.21,
-            "deg": 63.502
-        },
-        "clouds": {
-            "all": 20
-        },
-        "dt": 1541991360,
-        "sys": {
-            "type": 1,
-            "id": 479,
-            "message": 0.0049,
-            "country": "US",
-            "sunrise": 1542033836,
-            "sunset": 1542070746
-        },
-        "id": 420006441,
-        "name": "San Jos\u00e9",
-        "cod": 200
-    },
-    {
-        "coord": {
-            "lon": -122.04,
-            "lat": 37.37
-        },
-        "weather": [
-            {
-                "id": 721,
-                "main": "Haze",
-                "description": "haze",
-                "icon": "50n"
-            },
-            {
-                "id": 711,
-                "main": "Smoke",
-                "description": "smoke",
-                "icon": "50n"
-            }
-        ],
-        "base": "stations",
-        "main": {
-            "temp": 56.52,
-            "pressure": 1021,
-            "humidity": 34,
-            "temp_min": 51.08,
-            "temp_max": 60.08
-        },
-        "visibility": 8047,
-        "wind": {
-            "speed": 3.36,
-            "deg": 310
+            "speed": 1.92,
+            "deg": 329.001
         },
         "clouds": {
             "all": 1
         },
-        "dt": 1541991360,
+        "dt": 1542156900,
         "sys": {
             "type": 1,
-            "id": 428,
-            "message": 0.0052,
+            "id": 431,
+            "message": 0.0039,
             "country": "US",
-            "sunrise": 1542033876,
-            "sunset": 1542070779
+            "sunrise": 1542206651,
+            "sunset": 1542243539
         },
-        "id": 420006360,
-        "name": "Sunnyvale",
+        "id": 420004272,
+        "name": "Monterey",
         "cod": 200
     },
     {
@@ -437,28 +305,28 @@
         ],
         "base": "stations",
         "main": {
-            "temp": 55.02,
-            "pressure": 1021,
-            "humidity": 63,
-            "temp_min": 51.08,
-            "temp_max": 59
+            "temp": 59.13,
+            "pressure": 1028,
+            "humidity": 38,
+            "temp_min": 55.4,
+            "temp_max": 62.96
         },
-        "visibility": 12874,
+        "visibility": 16093,
         "wind": {
-            "speed": 3.36,
-            "deg": 360
+            "speed": 2.37,
+            "deg": 3.00067
         },
         "clouds": {
             "all": 1
         },
-        "dt": 1541991360,
+        "dt": 1542157200,
         "sys": {
             "type": 1,
             "id": 512,
-            "message": 0.0044,
+            "message": 0.0037,
             "country": "US",
-            "sunrise": 1542033832,
-            "sunset": 1542070823
+            "sunrise": 1542206753,
+            "sunset": 1542243537
         },
         "id": 420006444,
         "name": "Santa Cruz",
@@ -466,8 +334,8 @@
     },
     {
         "coord": {
-            "lon": -122.46,
-            "lat": 37.71
+            "lon": -121.45,
+            "lat": 38.58
         },
         "weather": [
             {
@@ -485,31 +353,163 @@
         ],
         "base": "stations",
         "main": {
-            "temp": 54.68,
-            "pressure": 1021,
-            "humidity": 57,
-            "temp_min": 46.4,
-            "temp_max": 60.08
+            "temp": 54.95,
+            "pressure": 1029,
+            "humidity": 46,
+            "temp_min": 51.08,
+            "temp_max": 57.2
         },
-        "visibility": 8047,
+        "visibility": 4023,
         "wind": {
-            "speed": 8.05,
-            "deg": 60
+            "speed": 5.73,
+            "deg": 318.501
+        },
+        "clouds": {
+            "all": 1
+        },
+        "dt": 1542157680,
+        "sys": {
+            "type": 1,
+            "id": 464,
+            "message": 0.0045,
+            "country": "US",
+            "sunrise": 1542206812,
+            "sunset": 1542243194
+        },
+        "id": 420004037,
+        "name": "Sacramento",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -118.24,
+            "lat": 34.05
+        },
+        "weather": [
+            {
+                "id": 711,
+                "main": "Smoke",
+                "description": "smoke",
+                "icon": "50n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 70.84,
+            "pressure": 1024,
+            "humidity": 15,
+            "temp_min": 68,
+            "temp_max": 73.94
+        },
+        "visibility": 16093,
+        "wind": {
+            "speed": 2.15,
+            "deg": 27.5007
+        },
+        "clouds": {
+            "all": 1
+        },
+        "dt": 1542157080,
+        "sys": {
+            "type": 1,
+            "id": 416,
+            "message": 0.0061,
+            "country": "US",
+            "sunrise": 1542205486,
+            "sunset": 1542242982
+        },
+        "id": 420003778,
+        "name": "Los Angeles",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -122.04,
+            "lat": 37.37
+        },
+        "weather": [
+            {
+                "id": 721,
+                "main": "Haze",
+                "description": "haze",
+                "icon": "50n"
+            },
+            {
+                "id": 711,
+                "main": "Smoke",
+                "description": "smoke",
+                "icon": "50n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 58.39,
+            "pressure": 1028,
+            "humidity": 64,
+            "temp_min": 55.4,
+            "temp_max": 60.8
+        },
+        "visibility": 4828,
+        "wind": {
+            "speed": 2.37,
+            "deg": 3.00067
+        },
+        "clouds": {
+            "all": 1
+        },
+        "dt": 1542157200,
+        "sys": {
+            "type": 1,
+            "id": 428,
+            "message": 0.0049,
+            "country": "US",
+            "sunrise": 1542206798,
+            "sunset": 1542243492
+        },
+        "id": 420006360,
+        "name": "Sunnyvale",
+        "cod": 200
+    },
+    {
+        "coord": {
+            "lon": -117.84,
+            "lat": 33.61
+        },
+        "weather": [
+            {
+                "id": 711,
+                "main": "Smoke",
+                "description": "smoke",
+                "icon": "50n"
+            }
+        ],
+        "base": "stations",
+        "main": {
+            "temp": 70.18,
+            "pressure": 1024,
+            "humidity": 21,
+            "temp_min": 64.4,
+            "temp_max": 73.94
+        },
+        "visibility": 16093,
+        "wind": {
+            "speed": 3.27,
+            "deg": 287.501
         },
         "clouds": {
             "all": 75
         },
-        "dt": 1541991360,
+        "dt": 1542157080,
         "sys": {
             "type": 1,
-            "id": 478,
+            "id": 485,
             "message": 0.0048,
             "country": "US",
-            "sunrise": 1542034018,
-            "sunset": 1542070838
+            "sunrise": 1542205339,
+            "sunset": 1542242937
         },
-        "id": 420004432,
-        "name": "San Francisco",
+        "id": 420004505,
+        "name": "Irvine",
         "cod": 200
     }
 ]

@@ -1,0 +1,28 @@
+linearLab4.py
+This is how long it took!  1.8070173263549805
+
+multiThreadedLab4.py
+This is how long it took!  0.1934506893157959
+
+multiProcessedLab4.py -- with 20 processes
+This is how long it took!  2.2040793895721436
+
+multiProcessedLab4.py --with len(list) processes
+This is how long it took!  1.5528297424316406
+
+multiProcessedLab4.py -- with 5 processes
+This is how long it took!  1.5390076637268066
+
+multiProcessedLab4.py -- with 4 processes
+This is how long it took!  1.0053012371063232
+
+multiProcessedLab4.py --- with 3 processes
+This is how long it took!  1.1086177825927734
+
+multiProcessedLab4.py --- with 1 process
+This is how long it took!  2.941105365753174
+
+
+"I have 8 core machine, but I learned that you have more processes available than the number of cores of your computer.
+Its interesting that any processes past four took more time. I am guessing that it has something to do with either the
+pickling process or allocating memory. It took even longer than our linear model!" - Sarah

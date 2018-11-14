@@ -1,27 +1,21 @@
 import requests
 import threading
-<<<<<<< HEAD
-import time
 from timer import timeit
-=======
 import json
-import time
 import copy
 import os
->>>>>>> cd27bea5ab4beb527bd49aebbcf2b7d630225d20
+import time
 
 ZIP_CODES = [94086, 92093, 90013, 95192, 94132, 94720, 95064, 95819, 92697, 93940, 94544]
 
-SAMPLE_URL = r"https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=b6907d289e10d714a6e88b30761fae22" #MTV
+DEBUG_VALUE = False #Debug used to manage being blocked from website while testing
 
+SAMPLE_URL = r"https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=b6907d289e10d714a6e88b30761fae22" #MTV
 API_KEY = "&APPID=3a4d4260edbb76d3c27c71f306b44c9c"
 
-@timeit
+
 class Weather:
-    import pdb;
-    pdb.set_trace()
-    startTime = time.time()
-    #__slots__ = ['zipCodes', 'cityList', 'weatherInfoDict']
+    __slots__ = ['zipCodes', 'cityList', 'weatherInfoDict', 'debug', 'startTime']
     def __init__(self, debug=False, zipCodes:list = ZIP_CODES):
         """Given a list of zipCodes parces weather API into a list of cities and nested dict of attributed keyed by Zipcode"""
         self.debug = True
@@ -30,7 +24,7 @@ class Weather:
         weatherListOfDicts = self.getWeatherInfo(urlList)
         self.cityList, self.weatherInfoDict = self.formatWeatherInfo(weatherListOfDicts)
 
-    def updateZipCodes(self,zip_codes): #use path sys package?
+    def updateZipCodes(self,zip_codes):
         """Given list of zip codes, returns url with mapped route to city"""
         updateUrl = []
         for zipCode in zip_codes:
@@ -43,27 +37,29 @@ class Weather:
 
     def getWeather(self, url:str, result_data):
         """Given url requests and returns api"""
-        # import pdb; pdb.set_trace()
         page = requests.get(url)
         result_data.append(page.json()) #page.json()
 
-
+    @timeit
     def getWeatherInfo(self, urlList):
             """ Given urls with appropriate routes, """
             createNewFile = False
+
+            # ```````````````````````````Testing``````````````````````````````````````````````````````
             if self.debug:
                 if os.path.isfile("json_output.json"):
                     with open("json_output.json", "r") as read_file:
                         store = json.load(read_file)
                     timeInserted = store[0]["timeInserted"]
-                    if time.time() - timeInserted < 1000:
+                    if time.time() - timeInserted < 1000: # if its less than some time since we collected store values
                         store.pop(0)
                         return store
                     else:
                         createNewFile = True
                 else:
                     createNewFile = True
-                
+
+            # `````````````````````````Threading````````````````````````````````````````````````````````
             listOfThreads = []
             resultData = []
             for url in urlList:
@@ -72,8 +68,10 @@ class Weather:
                 listOfThreads.append(t)
 
             self.joinThreads(listOfThreads)
+            print(os.path.basename(__file__))
 
-            if createNewFile:
+            # ```````````````````Testing```````````````````````````````````````````````````
+            if createNewFile: #if its been a while, re-gather the values
                 # From json to json file
                 temp = copy.copy(resultData)
                 temp.insert(0, {"timeInserted": time.time()})
@@ -85,14 +83,9 @@ class Weather:
     def joinThreads(self, allThreads:list):
         """Give list of threads, joins the them together to end processes"""
         for thread in allThreads:
-            # if thread.alive() == True:
             thread.join()
-        return None
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cd27bea5ab4beb527bd49aebbcf2b7d630225d20
     def formatWeatherInfo(self, cityData:dict):
         """Given dictionary, extracts a city list and assigns a zipcode as a key to a dictionary of city description and temp """
 
@@ -115,10 +108,7 @@ class Weather:
 
         return cityList, cityDict
 
-
-
-
 if __name__ =='__main__':
-    w = Weather(debug=True)
-
+    w = Weather(debug=DEBUG_VALUE)
+        # Stored fetched API's in a file so that we would not be blocked again while testing.
 

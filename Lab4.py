@@ -7,6 +7,8 @@ from tkinter import Frame, Button, Radiobutton, messagebox, filedialog, Scrollba
 import multiThreadedLab4 as helper
 import os
 
+DEBUG_VALUE = False
+
 class Window:
     def __init__(self, root, width = 300, height = 300):
         # Import Object and read the input file
@@ -15,14 +17,16 @@ class Window:
         self.root.title("Welcome to the weather app")
         self.root.geometry("500x500")
         self.init_page()
+        #self.update()
 
     def init_page(self):
-        
+
+        # ``````````````City Button```````````````````````````````````````````````
         self.choose_city_button = tk.Button(text="Choose a city", command=self.popup_city)
         self.choose_city_button.place(relx=0.5, y=15, anchor="c")
         
-        # self.scrollbar.pack(side="right", fill="y")
 
+        # ````````````````Scrollbar & Listbox``````````````````````````````````````````
         self.scrollbar = Scrollbar(self.root)
         self.scrollbar.pack(side = "right", fill = "y")
 
@@ -34,12 +38,10 @@ class Window:
     def popup_city(self):
         win = tk.Toplevel()
         win.title("Choose a city")
-        win.geometry("250x500")
+        win.geometry("250x400")
 
-        weather = helper.Weather(debug=True)
+        weather = helper.Weather(debug=DEBUG_VALUE)
         cityList = weather.cityList
-
-        # Fix this later
         cityList.sort()
 
         var = tk.StringVar()
@@ -52,7 +54,7 @@ class Window:
         insert_button.pack()
     
     def addNewCity(self, city):
-        weather = helper.Weather(debug=True)
+        weather = helper.Weather(debug=DEBUG_VALUE)
         sentence = "%s: %d degrees, %s" % (city, weather.weatherInfoDict[city]['temp'], weather.weatherInfoDict[city]['description'])
         self.listbox.insert("end", sentence)
     
